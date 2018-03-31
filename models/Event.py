@@ -25,3 +25,6 @@ class Event:
 
     def returnLocation(self):
         return self.eventLocation
+
+    def setCategoryName(self,name):
+        self.eventSubCategorie=name
