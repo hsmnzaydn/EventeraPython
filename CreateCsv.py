@@ -20,13 +20,13 @@ def writeToCsv(eventList):
         for event in eventList:
             name=event.returnCategoryName.split(' ')
             for tag in name:
-                if tag=="Rock" or "Pop" or "Diğer" or "Klasik" or "Türk" or "Caz" or "Heavy" or "Rap":
+                if tag=="Rock" or tag=="Pop" or tag=="Diğer" or tag=="Klasik" or tag=="Türk" or tag=="Caz" or tag=="Heavy" or tag=="Rap":
                     event.setCategoryName("Music")
-                elif tag == "Bale" or "Dans" or "Sinema" or "Tiyatro" or "Gösteri" or "Sirk" or "Sergi" or "Stand-Up" or "Sinema":
+                elif tag == "Bale" or tag=="Dans" or tag=="Sinema" or tag=="Tiyatro" or tag=="Gösteri" or tag=="Sirk" or tag=="Sergi" or tag=="Stand-Up" or tag=="Sinema":
                     event.setCategoryName("Arts")
                 elif tag == "Atölye":
                     event.setCategoryName("Hobbies")
-                elif tag== "Eğitim" or "Aile" or "MEB":
+                elif tag== "Eğitim" or tag=="Aile" or tag=="MEB":
                     event.setCategoryName("Family & Education")
                 else:
                     event.setCategoryName("other")

@@ -29,7 +29,7 @@ def getAllEvent():
             eventTime=eventStartDateDay+" "+eventStartDateTime
             eventName=eventSingle.find('h6').text
             eventLocation=eventSingle.find('p').text
-            eventSubCategorie="Arts"
+            eventSubCategorie="Arts "
             eventDetailPage=eventSingle.find('a')['href']
             eventDescription=getDetailOfEvent(Utils.getWithOutBaseUrlEventNumber('/Basket/Index/',eventDetailPage))
             event=Event(eventName,eventDescription,eventTime,None,eventSubCategorie,eventLocation)
