@@ -18,8 +18,7 @@ def writeToCsv(eventList):
         writer = csv.DictWriter(myFile, fieldnames=cloumns)    
         writer.writeheader()
         for event in eventList:
-            name=event.returnCategoryName.split(' ')
-            for tag in name:
+                tag=event.returnCategoryName
                 if tag=="Rock" or tag=="Pop" or tag=="Diğer" or tag=="Klasik" or tag=="Türk" or tag=="Caz" or tag=="Heavy" or tag=="Rap":
                     event.setCategoryName("Music")
                 elif tag == "Bale" or tag=="Dans" or tag=="Sinema" or tag=="Tiyatro" or tag=="Gösteri" or tag=="Sirk" or tag=="Sergi" or tag=="Stand-Up" or tag=="Sinema":
@@ -30,5 +29,5 @@ def writeToCsv(eventList):
                     event.setCategoryName("Family & Education")
                 else:
                     event.setCategoryName("other")
-            writer.writerow({eventName : event.returnEventName(), eventDescription:event.returnEventDescription(),eventStartTime:event.returnEventStartTime(),eventEndTime:event.returnEventEndTime(),eventCategoryName:event.returnCategoryName(),eventLocation:event.returnLocation() })
+                writer.writerow({eventName : event.returnEventName(), eventDescription:event.returnEventDescription(),eventStartTime:event.returnEventStartTime(),eventEndTime:event.returnEventEndTime(),eventCategoryName:event.returnCategoryName(),eventLocation:event.returnLocation() })
 
