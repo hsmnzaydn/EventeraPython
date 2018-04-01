@@ -6,8 +6,8 @@ import CreateCsv
 eventList=[]
 
 eventList.extend(EventBriteParse.getEventList())
-#eventList.extend(CityTheatreOfIstanbul.getEventList())
-#eventList.extend(ButceneGoreParse.getEventList())
+eventList.extend(CityTheatreOfIstanbul.getEventList())
+eventList.extend(ButceneGoreParse.getEventList())
 
 
 
