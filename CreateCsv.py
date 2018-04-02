@@ -19,15 +19,13 @@ def writeToCsv(eventList):
         writer.writeheader()
         for event in eventList:
                 tag=event.returnCategoryName
-                if tag=="Rock" or tag=="Pop" or tag=="Diğer" or tag=="Klasik" or tag=="Türk" or tag=="Caz" or tag=="Heavy" or tag=="Rap":
+                if tag=="Rock" or  tag=="Türk Sanat - Halk Müziği" or tag=="Pop" or tag=="Diğer Müzik" or tag=="Klasik" or tag=="Türk" or tag=="Caz" or tag=="Heavy Metal" or tag=="Rap" or tag== "Caz":
                     event.setCategoryName("Music")
-                elif tag == "Bale" or tag=="Dans" or tag=="Sinema" or tag=="Tiyatro" or tag=="Gösteri" or tag=="Sirk" or tag=="Sergi" or tag=="Stand-Up" or tag=="Sinema":
+                elif tag=="Latin - Tango" or tag == "Bale" or tag=="Sergi" or tag=="New Age" or tag == "Alternatif" or tag== "Tiyatro" or tag== "Aile Tiyatrosu" or tag=="Dans - Elektronik" or tag=="Sinema" or tag=="Tiyatro" or tag=="Gösteri" or tag=="Sirk" or tag=="Sergi" or tag=="Stand-Up" or tag=="Sinema":
                     event.setCategoryName("Arts")
                 elif tag == "Atölye":
                     event.setCategoryName("Hobbies")
-                elif tag== "Eğitim" or tag=="Aile" or tag=="MEB":
+                elif tag== "Eğitim" or tag=="Aile" or tag=="MEB Onaylı Eğitim" or tag=="Konferans":
                     event.setCategoryName("Family & Education")
-                else:
-                    event.setCategoryName("other")
                 writer.writerow({eventName : event.returnEventName(), eventDescription:event.returnEventDescription(),eventStartTime:event.returnEventStartTime(),eventEndTime:event.returnEventEndTime(),eventCategoryName:event.returnCategoryName(),eventLocation:event.returnLocation() })
 
